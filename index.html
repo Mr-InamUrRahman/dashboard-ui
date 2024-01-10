@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body class="overflow-x-hidden">
+    <main class="h-screen flex">
+        <aside class="aside bg-primary-dark h-100 xl:w-[184px] md:w-[42px] transition-all">
+            <div class="min-h-20 relative">
+                <button onclick="toggleSideMenu()" class="side-menu absolute inset-y-0 right-0 my-auto mx-2 h-5 w-5 flex items-center justify-center">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.1175 13.838L7.11225 9.99833L11.1175 6.15862C11.2267 6.05431 11.3731 5.99729 11.5247 6.0001C11.6762 6.00291 11.8204 6.06533 11.9256 6.17362C12.0308 6.28191 12.0882 6.4272 12.0854 6.57753C12.0826 6.72786 12.0197 6.87091 11.9105 6.97522L8.75534 9.99833L11.9105 13.0248C12.0197 13.1291 12.0826 13.2721 12.0854 13.4225C12.0882 13.5728 12.0308 13.7181 11.9256 13.8264C11.8204 13.9347 11.6762 13.9971 11.5247 13.9999C11.3731 14.0027 11.2267 13.9457 11.1175 13.8414L11.1175 13.838Z" fill="white"/>
+                    </svg>                        
+                </button>
+            </div>
+            <nav class="text-white">
+                <a href="#" class="flex gap-2 items-center px-2 py-3 xl:text-sm md:text-[0px] hover:bg-nav-active hover:border-[#E6A724] border-r-6 border-transparent">
+                    <img src="./assets/img/icons/home.svg" alt="">
+                    <span>Home</span>
+                </a>
+        
+                <a href="#" class="flex gap-2 items-center px-2 py-3 xl:text-sm md:text-[0px] hover:bg-nav-active hover:border-[#E6A724] border-r-6 border-transparent">
+                    <img src="./assets/img/icons/booking.svg" alt="">
+                    <span>Booking</span>
+                </a>
+            
+                <a href="#" class="flex gap-2 items-center px-2 py-3 xl:text-sm md:text-[0px] bg-nav-active border-r-6 border-[#E6A724]">
+                    <img src="./assets/img/icons/shipment.svg" alt="">
+                    <span>Shipments</span>
+                </a>
+        
+                <a href="#" class="flex gap-2 items-center px-2 py-3 xl:text-sm md:text-[0px] hover:bg-nav-active hover:border-[#E6A724] border-r-6 border-transparent">
+                    <img src="./assets/img/icons/billing.svg" alt="">
+                    <span>Billing</span>
+                </a>
+            
+                <a href="#" class="flex gap-2 items-center px-2 py-3 xl:text-sm md:text-[0px] hover:bg-nav-active hover:border-[#E6A724] border-r-6 border-transparent">
+                    <img src="./assets/img/icons/wms.svg" alt="">
+                    <span>WMS</span>
+                </a>
+        
+                <a href="#" class="flex gap-2 items-center px-2 py-3 xl:text-sm md:text-[0px] hover:bg-nav-active hover:border-[#E6A724] border-r-6 border-transparent">
+                    <img src="./assets/img/icons/quotations.svg" alt="">
+                    <span>Quotations</span>
+                </a>
+        
+                <a href="#" class="flex gap-2 items-center px-2 py-3 xl:text-sm md:text-[0px] hover:bg-nav-active hover:border-[#E6A724] border-r-6 border-transparent">
+                    <img src="./assets/img/icons/reports.svg" alt="">
+                    <span>Reports</span>
+                </a>
+
+                <a href="#" class="flex gap-2 items-center px-2 py-3 xl:text-sm md:text-[0px] hover:bg-nav-active hover:border-[#E6A724] border-r-6 border-transparent">
+                    <img src="./assets/img/icons/address-book.svg" alt="">                               
+                    <span>Address Book</span>
+                </a>
+
+                <a href="#" class="flex gap-2 items-center px-2 py-3 xl:text-sm md:text-[0px] hover:bg-nav-active hover:border-[#E6A724] border-r-6 border-transparent">
+                    <img src="./assets/img/icons/ware.svg" alt="">                               
+                    <span>Warehouse Receipts</span>
+                </a>
+                
+            </nav>
+        </aside>
+        <section class="main-content xl:w-[calc(100%-184px)] md:w-[calc(100%-42px)] transition-all">
+            <header class="flex items-center justify-between p-6 backdrop-blur-sm bg-white/30">
+                <div class="flex items-center gap-8">
+                    <select class="w-20 text-color-100 text-sm font-medium">
+                        <option value="ABC Co.">ABC Co.</option>
+                        <option value="ABC Co.">ABC Co.</option>
+                        <option value="ABC Co.">ABC Co.</option>
+                    </select>
+
+                    <ul class="flex items-center gap-4 text-primary-dark text-sm">
+                        <li class="relative after:content-['/'] after:absolute after:inset-y-0 after:-right-3">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="relative after:content-['/'] after:absolute after:inset-y-0 after:-right-3">
+                            <a href="#">Shipments</a>
+                        </li>
+                        <li>
+                            <span>Shipment Details</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-5">
+                    <button  class="relative after:content-[''] after:h-2 after:w-2 after:bg-red-700 after:absolute after:right-0 after:top-0 after:rounded-full">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.3764 16.7435C17.8217 16.2382 17.336 15.6589 16.9325 15.0213C16.492 14.1411 16.2279 13.1799 16.1559 12.194V9.29032C16.1597 7.74186 15.61 6.24527 14.61 5.08174C13.61 3.91821 12.2287 3.16783 10.7254 2.9716V2.21335C10.7254 2.00523 10.6445 1.80564 10.5005 1.65848C10.3564 1.51132 10.1611 1.42865 9.95742 1.42865C9.75374 1.42865 9.5584 1.51132 9.41438 1.65848C9.27036 1.80564 9.18945 2.00523 9.18945 2.21335V2.98335C7.69966 3.19374 6.33497 3.94865 5.34814 5.10827C4.36131 6.26789 3.8192 7.75363 3.82224 9.29032V12.194C3.75019 13.1799 3.48615 14.1411 3.04563 15.0213C2.6492 15.6575 2.17134 16.2367 1.62473 16.7435C1.56337 16.7986 1.51419 16.8664 1.48046 16.9424C1.44674 17.0184 1.42924 17.1009 1.42914 17.1843V17.9837C1.42914 18.1396 1.48975 18.2891 1.59763 18.3993C1.70551 18.5096 1.85183 18.5715 2.0044 18.5715H17.9967C18.1493 18.5715 18.2956 18.5096 18.4035 18.3993C18.5114 18.2891 18.572 18.1396 18.572 17.9837V17.1843C18.5719 17.1009 18.5544 17.0184 18.5207 16.9424C18.4869 16.8664 18.4378 16.7986 18.3764 16.7435ZM2.62569 17.3959C3.16092 16.8676 3.63217 16.2756 4.02933 15.6326C4.58424 14.5695 4.90801 13.3966 4.97852 12.194V9.29032C4.9557 8.60146 5.06879 7.91494 5.31104 7.27166C5.5533 6.62838 5.91977 6.04149 6.38863 5.54593C6.85749 5.05038 7.41915 4.6563 8.04017 4.38715C8.66119 4.11801 9.32887 3.9793 10.0034 3.9793C10.678 3.9793 11.3457 4.11801 11.9667 4.38715C12.5877 4.6563 13.1494 5.05038 13.6183 5.54593C14.0871 6.04149 14.4536 6.62838 14.6958 7.27166C14.9381 7.91494 15.0512 8.60146 15.0284 9.29032V12.194C15.0989 13.3966 15.4227 14.5695 15.9776 15.6326C16.3747 16.2756 16.846 16.8676 17.3812 17.3959H2.62569Z" fill="#9B9FA4"/>
+                            <path d="M10.0266 19.9997C10.3688 19.9907 10.6971 19.8423 10.9536 19.5809C11.2101 19.3195 11.3781 18.9619 11.428 18.5714H8.57086C8.62218 18.9725 8.79809 19.3385 9.06587 19.6012C9.33364 19.864 9.67506 20.0056 10.0266 19.9997Z" fill="#9B9FA4"/>
+                        </svg>                                                      
+                    </button>
+
+                    <button class="h-7 w-7 bg-gray-300 rounded-full">
+
+                    </button>
+                </div>
+            </header>
+            <div class="h-[calc(100vh-76px)] ps-6 pb-6 overflow-y-auto overflow-x-hidden">
+                <h1 class="flex flex-col gap-1 text-primary-dark font-bold text-xl mb-5">
+                    <small class="text-sm font-normal">House Bill</small>
+                    SNYD00000000
+                </h1>
+
+                <div class="flex justify-between gap-8 relative">
+                    <div class="content transition-all 2xl:w-[calc(100%-313px)] xl:w-[calc(100%-350px)] md:w-[calc(100%-350px)] flex flex-col gap-10">
+                        
+                        <div class="flex gap-5 items-start">
+                            <div class="route relative z-10 w-[577px] min-h-[192px] p-8 bg-primary-100 shadow-[0px_4px_30px_0px_rgba(0,0,0,0.04)] rounded-xl">
+                                <small class="text-sm text-primary-light font-medium mb-3 block">Route</small>
+    
+                                <div class="flex gap-3 items-center">
+                                    <div class="flex flex-col gap-2 items-start basis-28">
+                                        <label for="From" class="text-sm text-color-light font-medium">From</label>
+                                        <input type="text" value="[CODE]" readonly class="w-full bg-transparent outline-none text-4xl text-primary-light font-medium">
+                                        <span class="text-sm font-medium text-primary-light">City, Co.</span>
+                                    </div>
+                                    <figure class="flex flex-col text-center flex-1 uppercase font-medium text-primary-light text-sm">
+                                        <img src="./assets/img/air.webp" alt="" class="m-auto">
+                                        <figcaption>Air</figcaption>
+                                    </figure>
+                                    <div class="flex flex-col gap-2 items-start basis-28">
+                                        <label for="To" class="text-sm text-color-light font-medium">To</label>
+                                        <input type="text" value="[CODE]" readonly class="w-full bg-transparent outline-none text-4xl text-primary-light font-medium">
+                                        <span class="text-sm font-medium text-primary-light">City, Co.</span>
+                                    </div>
+                                </div>
+    
+                                <figure class="absolute bottom-0 inset-x-0 z-0">
+                                    <img src="./assets/img/city.svg" alt="">
+                                </figure>
+                            </div>
+                            
+                            <ul class="shipper-list flex flex-col gap-2 max-h-48 overflow-auto pr-7">
+                                <li>
+                                    <div class="flex flex-col gap-1">
+                                        <small class="text-sm font-normal">Shipper</small>
+                                        <strong class="text-sm font-medium uppercase">CORPORATION<br/> 1000 BSNS PLACE<br/> SUITE 400<br/> CITY, CO</strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex flex-col gap-1">
+                                        <small class="text-sm font-normal">Consignee</small>
+                                        <strong class="text-sm font-medium uppercase">TECHNOLOGIES LTD<br/>LOT 10 & 11, <br/>INDUSTRIAL ZONE PHASE<br/>TECH PARK<br/> CITY, CO</strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex flex-col gap-1">
+                                        <small class="text-sm font-normal">Shipper</small>
+                                        <strong class="text-sm font-medium uppercase">CORPORATION<br/> 1000 BSNS PLACE<br/> SUITE 400<br/> CITY, CO</strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex flex-col gap-1">
+                                        <small class="text-sm font-normal">Shipper</small>
+                                        <strong class="text-sm font-medium uppercase">CORPORATION<br/> 1000 BSNS PLACE<br/> SUITE 400<br/> CITY, CO</strong>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="flex items-start gap-12 overflow-x-auto">
+                            <table class="relative after:content-[''] after:absolute after:inset-y-0 after:-right-6 after:h-full after:w-[2px] after:bg-primary-100 stripeTable table-group table-fixed text-sm text-left basis-60">
+                                <caption class="text-left font-medium mb-2">Forwarder References</caption>
+                                <tbody>
+                                    <tr>
+                                        <td>House Bill #:</td>
+                                        <th>SNYD00000</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Master Bill #:</td>
+                                        <th>SNYD00000</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Quotation #:</td>
+                                        <th>SNYD00000</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Houe Bill Status:</td>
+                                        <th>IMPORT</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+    
+                            <table class="relative after:content-[''] after:absolute after:inset-y-0 after:-right-6 after:h-full after:w-[2px] after:bg-primary-100 stripeTable table-group table-fixed text-sm text-left basis-60">
+                                <caption class="text-left font-medium mb-2">Customer References</caption>
+                                <tbody>
+                                    <tr>
+                                        <td>PO #:</td>
+                                        <th>SNYD00000</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Master Bill #: </td>
+                                        <th>SNYD00000</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Other #:</td>
+                                        <th>SNYD00000</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+    
+                            <table class="stripeTable table-group table-fixed text-sm text-left basis-[710px]">
+                                <caption class="text-left font-medium mb-2">Cargo Details</caption>
+                                <tbody>
+                                    <tr>
+                                        <td>Service Level:</td>
+                                        <th>STANDARD</th>
+    
+                                        
+                                        <td>Incoterms:</td>
+                                        <th>DDU</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Delivery Term: </td>
+                                        <th>Prepaid</th>
+
+                                        
+                                        
+                                        <td>Commodity:</td>
+                                        <th>EPITAXIAL WAFERS</th>
+                                    </tr>
+                            
+                                    <tr>
+                                        <td>Pieces:</td>
+                                        <th>3</th> 
+
+                                        <td>Gross Weight:</td>
+                                        <th>604.5 K</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="w-full flex flex-col gap-4">
+                            <div class="tab-nave flex items-center gap-3 overflow-x-auto">
+                                <button data-tab="tab1" class="tab-link min-w-[135px] min-h-[50px] flex items-center justify-center rounded-md text-sm font-medium">Tracking</button>
+                                <button data-tab="tab2" class="tab-link min-w-[135px] min-h-[50px] flex items-center justify-center rounded-md text-sm font-medium text-color-200 hover:bg-primary-dark hover:text-white">Routing</button>
+                                <button data-tab="tab3" class="tab-link min-w-[135px] min-h-[50px] flex items-center justify-center rounded-md text-sm font-medium text-color-200 hover:bg-primary-dark hover:text-white">Exceptions</button>
+                                <button data-tab="tab4" class="tab-link min-w-[135px] min-h-[50px] flex items-center justify-center rounded-md text-sm font-medium text-color-200 hover:bg-primary-dark hover:text-white">References</button>
+                                <button data-tab="tab5" class="tab-link min-w-[135px] min-h-[50px] flex items-center justify-center rounded-md text-sm font-medium text-color-200 hover:bg-primary-dark hover:text-white">Documents</button>
+                                <button data-tab="tab6" class="tab-link min-w-[135px] min-h-[50px] flex items-center justify-center rounded-md text-sm font-medium text-color-200 hover:bg-primary-dark hover:text-white">Notes</button>
+                            </div>
+                            <div id="tabs-content-wrapper">
+                                <div id="tab1" class="tab-content overflow-x-auto">
+                                    <table class="stripeTableLarge table-group table-auto text-sm text-left w-full">
+                                        <thead class="relative after:border-primary-light after:border after:content-[''] after:absolute after:inset-0 after:rounded-md">
+                                            <tr class="text-primary-light bg-primary-100">
+                                                <th class="rounded-s-md">Events</th>
+                                                <th>Location</th>
+                                                <th>Remarks</th>
+                                                <th>Expected Date</th>
+                                                <th>
+                                                    Actual Date 
+                                                    <svg class="inline-block ms-2 align-baseline" width="11" height="12" viewBox="0 0 11 12"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1 4.8264L5.67101 1.02097M5.08466 0.822266L10 4.82675M5.5 1.35732V11.8223" stroke="currentColor"/>
+                                                    </svg>
+                                                </th>
+                                                <th class="rounded-e-md">
+                                                    Source
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Delivered to consignee</td>
+                                                <td>MEX</td>
+                                                <td>DLV</td>
+                                                <td></td>
+                                                <td>02/18/21 12:00 AM</td>
+                                                <td>Carrier</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Delivered to consignee</td>
+                                                <td>MEX</td>
+                                                <td>DLV</td>
+                                                <td></td>
+                                                <td>02/18/21 12:00 AM</td>
+                                                <td>Carrier</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Delivered to consignee</td>
+                                                <td>MEX</td>
+                                                <td>DLV</td>
+                                                <td>02/17/21 10:35AM</td>
+                                                <td>02/18/21 12:00 AM</td>
+                                                <td>Carrier</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Delivered to consignee</td>
+                                                <td>MEX</td>
+                                                <td>DLV</td>
+                                                <td></td>
+                                                <td>02/18/21 12:00 AM</td>
+                                                <td>Carrier</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Delivered to consignee</td>
+                                                <td>MEX</td>
+                                                <td>DLV</td>
+                                                <td></td>
+                                                <td>02/18/21 12:00 AM</td>
+                                                <td>Carrier</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Delivered to consignee</td>
+                                                <td>MEX</td>
+                                                <td>DLV</td>
+                                                <td>02/17/21 10:35AM</td>
+                                                <td>02/18/21 12:00 AM</td>
+                                                <td>Carrier</td>
+                                            </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="tab2"  class="tab-content overflow-x-auto">2</div>
+                                <div id="tab3"  class="tab-content overflow-x-auto">3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="toggleMilestone()" class="toggle-milestone absolute -top-10 right-0 w-[40px] h-[36px] bg-primary-dark rounded-s-md">
+                        <img src="./assets/img/icons/arrow.svg" alt="" class="m-auto">
+                    </button>
+                    
+                    <div class="milestone">
+                        <div class="milestone-box transition-all relative right-0 w-[313px] h-max rounded-s-xl p-4 shadow-[0px_4px_15px_0px_rgba(0,0,0,0.15)]">
+                            <strong class="text-sm text-primary-light block mb-3">Milestones by Date</strong>
+
+                            <ul class="flex flex-col gap-10 ps-3">
+                                <li class="group relative z-0 after:absolute after:-z-10 after:-bottom-14 after:left-10 after:content-[''] after:h-full after:w-[2px] after:bg-primary-light">
+                                    <div class="flex gap-3 p-5 text-primary-light bg-primary-100 rounded-xl border-1 border-primary-light group-hover:bg-primary-dark group-hover:text-white">
+                                
+                                        <figure class="group-hover:invert group-hover:brightness-0 w-16 h-16 flex items-center justify-start">
+                                            <img src="./assets/img/icons/shipment-booked.svg" alt="" class="w-14 h-12 object-contain object-center">
+                                        </figure>
+                                        <div class="text-sm flex flex-col gap-1">
+                                            <strong>Shipment Booked</strong>
+                                            <time datetime="02/15/23 10:17 AM">02/15/23 10:17 AM</time>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="group group relative z-0 after:absolute after:-z-10 after:-bottom-14 after:left-10 after:content-[''] after:h-full after:w-[2px] after:bg-primary-light">
+                                    <div class="flex gap-3 p-5 text-primary-light bg-primary-100 rounded-xl border-1 border-primary-light group-hover:bg-primary-dark group-hover:text-white">
+            
+                                        <figure class="group-hover:invert group-hover:brightness-0 w-16 h-16 flex items-center justify-start">
+                                            <img src="./assets/img/icons/transit.svg" alt="" class="w-14 h-12 object-contain object-center">
+                                        </figure>
+                                        <div class="text-sm flex flex-col gap-1">
+                                            <strong>In Transit</strong>
+                                            <time datetime="02/15/23 10:17 AM">02/15/23 10:17 AM</time>
+                                            <span class="uppercase">LOCATION</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="group relative z-0 after:absolute after:-z-10 after:-bottom-14 after:left-10 after:content-[''] after:h-full after:w-[2px] after:bg-primary-light">
+                                    <div class="flex gap-3 p-5 text-primary-light bg-primary-100 rounded-xl border-1 border-primary-light group-hover:bg-primary-dark group-hover:text-white">
+                                
+                                        <figure class="group-hover:invert group-hover:brightness-0 w-16 h-16 flex items-center justify-start">
+                                            <img src="./assets/img/icons/map.svg" alt="" class="w-14 h-12 object-contain object-center">
+                                        </figure> 
+                                        <div class="text-sm flex flex-col gap-1">
+                                            <strong>Arrived to Destination</strong>
+                                            <time datetime="02/15/23 10:17 AM">02/15/23 10:17 AM</time>
+                                            <span class="uppercase">LOCATION</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="group relative z-0 after:absolute after:-z-10 after:-bottom-14 after:left-10 after:content-[''] after:h-full after:w-[2px] after:bg-primary-light">
+                                    <div class="flex gap-3 p-5 text-primary-light bg-primary-100 rounded-xl border-1 border-primary-light group-hover:bg-primary-dark group-hover:text-white">
+                                    
+                                        <figure class="group-hover:invert group-hover:brightness-0 w-16 h-16 flex items-center justify-start">
+                                            <img src="./assets/img/icons/customs.svg" alt="" class="w-14 h-12 object-contain object-center">
+                                        </figure> 
+                                        <div class="text-sm flex flex-col gap-1">
+                                            <strong>Customs Cleared</strong>
+                                            <time datetime="02/15/23 10:17 AM">02/15/23 10:17 AM</time>
+                                            <span class="uppercase">LOCATION</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="group relative z-0">
+                                    <div class="flex gap-3 p-5 text-primary-light bg-primary-100 rounded-xl border-1 border-primary-light group-hover:bg-primary-dark group-hover:text-white">
+                                        <figure class="group-hover:invert group-hover:brightness-0 w-16 h-16 flex items-center justify-start">
+                                            <img src="./assets/img/icons/delivered.svg" alt="" class="w-14 h-12 object-contain object-center">
+                                        </figure>
+                                            
+                                        <div class="text-sm flex flex-col gap-1">
+                                            <strong>Delivered</strong>
+                                            <time datetime="02/15/23 10:17 AM">02/15/23 10:17 AM</time>
+                                            <span class="uppercase">LOCATION</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/custom.js"></script>
+</body>
+</html>
